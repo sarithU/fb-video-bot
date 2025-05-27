@@ -3,7 +3,9 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 import yt_dlp
 import os
 
-TOKEN = '7930864892:AAEnEgr80sWZQWQV1IXU97QqhzDVmtxV3k4'
+import os
+TOKEN = os.getenv('7930864892:AAEnEgr80sWZQWQV1IXU97QqhzDVmtxV3k4')
+
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Send me a Facebook video link!')
