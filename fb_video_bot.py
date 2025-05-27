@@ -4,7 +4,12 @@ import yt_dlp
 import os
 
 import os
-TOKEN = os.getenv('7930864892:AAEnEgr80sWZQWQV1IXU97QqhzDVmtxV3k4')
+from telegram.ext import ApplicationBuilder
+
+TOKEN = os.getenv("TOKEN")
+
+app = ApplicationBuilder().token(TOKEN).build()
+
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
